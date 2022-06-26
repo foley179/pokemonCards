@@ -1,3 +1,4 @@
+/*Universal*/
 html {
   position: relative;
   min-height: 100%;
@@ -7,6 +8,11 @@ html {
 body {
   margin-bottom: 60px;
   background-color: #bebebe;
+}
+
+/*bootstrap adjustments*/
+.form-group, .btn {
+    margin-top: 3px;
 }
 
 @media (min-width: 768px) {
