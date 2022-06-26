@@ -37,6 +37,21 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
+
+            <!--Img Modal-->
+            <div class="modal fade" id="imgModal">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content" action="#">
+                        <div class="modal-header">
+                                <div class="modalHeader fw-bold fs-5"></div>
+                                <button type="button" class="btn-close btn-secondary" data-bs-dismiss="modal" aria-label="close"></button>
+                        </div>
+                        <div class="modal-body">
+                              <div class="container imgContainer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 

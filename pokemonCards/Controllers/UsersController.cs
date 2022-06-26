@@ -155,6 +155,13 @@ namespace pokemonCards.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // GET: Users/UserList
+        public async Task<IActionResult> getUsers()
+        { // used from JS AJAX to update user select dropdown
+            var UserList = await _context.User.ToListAsync();
+            return Json(UserList);
+        }
+
         private bool UserExists(int id)
         {
           return (_context.User?.Any(e => e.ID == id)).GetValueOrDefault();

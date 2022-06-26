@@ -48,6 +48,7 @@ namespace pokemonCards.Controllers
         // GET: Cards/Create
         public IActionResult Create()
         {
+
             return View();
         }
 
