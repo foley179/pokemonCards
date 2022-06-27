@@ -8,21 +8,33 @@ namespace pokemonCards.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "User")]
-        public string User { get; set; }
-        //public IEnumerable<SelectListItem> UserList { get; set; }
-        // currently causing error
+        public string? User { get; set; }
 
         [Required]
-        [Display(Name = "Name")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Required]
         [Display(Name = "Serial Code")]
-        public string Serial { get; set; }
+        public string? Serial { get; set; }
+
+        [Required]
+        public string? Holo { get; set; }
+
+        [Required]
+        public string? Set { get; set; }
+
+        [Required]
+        public string? Subset { get; set; }
+
+        [Required]
+        public string? Rarity { get; set; }
+
+        [Display(Name = "Image Code")]
+        public string ImgCode { get; set; }
 
         public Card()
         {
+            ImgCode = "N/A";
             // left empty for other methods
         }
     }
