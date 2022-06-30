@@ -28,7 +28,7 @@ $(".imgButton").on("click", (e) => {
     $("#imgModal").modal("show");
 });
 
-$("#editSaveButton").on("click", (e) => {
+$(".editSaveButton").on("click", (e) => {
     console.log("test");
     e.preventDefault();
     let user = $("#userOption").val();

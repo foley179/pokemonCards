@@ -51,10 +51,9 @@
             <div class="form-group">
                 <label asp-for="ImgCode" class="control-label"></label>
                 <input asp-for="ImgCode" class="form-control" />
-                <span asp-validation-for="ImgCode" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <a id="editSaveButton" class="btn btn-primary me-2">Save</a>
+                <a class="btn btn-primary me-2 editSaveButton">Save</a>
                 <a class="btn btn-secondary" asp-action="Index">Back to List</a>
             </div>
 
@@ -70,7 +69,7 @@
                             <div class="container">Are you sure you want to edit <strong id="userContainer"></strong>'s card details?</div>
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" value="Yes" class="btn btn-primary me-2" />
+                            <input type="submit" value="Yes" data-bs-dismiss="modal" class="btn btn-primary me-2" />
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
                         </div>
                     </div>

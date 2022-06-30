@@ -7,8 +7,13 @@ html {
 
 body {
     margin-bottom: 60px;
-    background: rgb(175,0,0);
-    background: linear-gradient(0deg, rgba(175,0,0,0.5595821092108719) 0%, rgba(190,190,190,1) 100%);
+    background-image: url("../pikachu-bg.jpg");
+    background-repeat: repeat;
+}
+
+#main {
+    min-width: 70%;
+    background-color: rgba(240, 240, 240, 0.9);
 }
 
 /*bootstrap adjustments*/

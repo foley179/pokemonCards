@@ -19,14 +19,30 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <a class="btn btn-primary me-2 editSaveButton">Save</a>
+                <a class="btn btn-secondary" asp-action="Index">Back to List</a>
+            </div>
+
+            <!--Confirm Modal-->
+            <div class="modal fade" id="confirmModal">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content" action="#">
+                        <div class="modal-header">
+                            <div class="modalHeader fw-bold fs-5"></div>
+                            <button type="button" class="btn-close btn-secondary" data-bs-dismiss="modal" aria-label="close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">Are you sure you want to change to <strong id="userContainer"></strong>?</div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" value="Yes" data-bs-dismiss="modal" class="btn btn-primary me-2" />
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

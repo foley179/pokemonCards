@@ -30,11 +30,11 @@ namespace pokemonCards.Models
         public string? Rarity { get; set; }
 
         [Display(Name = "Image Code")]
+        [Required]
         public string ImgCode { get; set; }
 
         public Card()
         {
-            ImgCode = "N/A";
             // left empty for other methods
         }
     }
