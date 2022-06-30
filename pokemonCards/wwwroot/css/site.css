@@ -6,8 +6,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-  background-color: #bebebe;
+    margin-bottom: 60px;
+    background: rgb(175,0,0);
+    background: linear-gradient(0deg, rgba(175,0,0,0.5595821092108719) 0%, rgba(190,190,190,1) 100%);
 }
 
 /*bootstrap adjustments*/
@@ -15,9 +16,22 @@ body {
     margin-top: 3px;
 }
 
+.footer div {
+    white-space: normal;
+    line-height: normal;
+}
+
 /*custom classes*/
 .disabled {
     cursor: default;
+}
+
+.welcomePage {
+    font-size: 1.2rem;
+}
+
+.welcomePage a {
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {

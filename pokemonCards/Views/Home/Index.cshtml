@@ -3,6 +3,15 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4 fw-bold">Welcome</h1>
+    <p class="welcomePage">
+        This is a small site designed to keep track of cards you want to trade/sell.
+        <br />
+        Please make sure you have <a asp-area="" asp-controller="Users" asp-action="Create">created a user</a> first, I advise using your discord names to help keep track of who to message about the card. 
+        once your user is created you can then <a asp-area="" asp-controller="Cards" asp-action="Create">create</a> a record of the card you 
+        want to trade. On the "create new" and "edit" pages you will see  a box for "image code" to get this go to 
+        <a href="https://pokemontcg.guru/advanced">Pokemon tcg guru</a> and used the advanced search to find the card you want to trade, 
+        then in the address bar you will see something like "pokemontcg.guru/card/pikachu-pop/<strong>pop4-13</strong>", the last part in bold 
+        is the code you want. This code will allow an image link to be available on the "Cards" and "Details" pages.
+    </p>
 </div>
