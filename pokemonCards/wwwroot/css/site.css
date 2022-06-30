@@ -31,6 +31,10 @@ body {
     cursor: default;
 }
 
+.w-70 {
+    min-width: 70%;
+}
+
 .welcomePage {
     font-size: 1.2rem;
 }

@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="~/pokemonCards.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <header class="bg-dark text-light">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom border-dark box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pokemon TC Tracker</a>
+                <a class="navbar-brand text-info" asp-area="" asp-controller="Home" asp-action="Index">Pokemon TC Tracker</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,13 +20,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cards" asp-action="Index">Cards</a>
+                            <a class="nav-link" asp-area="" asp-controller="Cards" asp-action="Index">Cards</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
+                            <a class="nav-link" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -55,8 +55,8 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-dark bg-white">
-        <div class="ms-3 my-1">Any issues or ideas? &#64;foley179 on the discord channel #Brainstorm-with-dan.</div>
+    <footer class="border-top border-dark footer text-light bg-dark">
+        <div class="w-70 container my-1">Any issues or ideas? &#64;foley179 on the discord channel #Brainstorm-with-dan.</div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
