@@ -159,5 +159,13 @@ namespace pokemonCards.Controllers
         {
           return (_context.Card?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        // Cards/Search
+        [HttpPost]
+        public async Task<PartialViewResult> Search(string searchTerm, string filter)
+        {
+            var Result = await _context.Card.Where(card => card.Name.Contains(searchTerm)).OrderBy(card => card.Name).ToListAsync();
+            return PartialView("Index", Result);
+        }
     }
 }

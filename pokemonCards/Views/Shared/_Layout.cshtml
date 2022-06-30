@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="~/pokemonCards.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header class="bg-dark text-light">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom border-dark box-shadow mb-3">
+    <header class="bg-dark text-light mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom border-dark box-shadow d-i-flex">
             <div class="container-fluid">
-                <a class="navbar-brand text-info" asp-area="" asp-controller="Home" asp-action="Index">Pokemon TC Tracker</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a class="navbar-brand text-info d-none d-md-block" asp-area="" asp-controller="Home" asp-action="Index">Pokemon TC Tracker</a>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -33,6 +33,17 @@
                 </div>
             </div>
         </nav>
+        <!-- search bar -->
+        <div class="input-group searchForm navbar me-2">
+            <input id="search" class="form-control" type="search" placeholder="Search for" aria-label="Search">
+            <!-- search filter dropdown -->
+            <select class="form-select" id="searchFilter">
+                <option value="name">Name</option>
+                <option value="user">User</option>
+                <option value="set">Set</option>
+                <option value="rarity">Rarity</option>
+            </select>
+        </div>
     </header>
     <div class="container" id="main">
         <main role="main" class="pb-3">
