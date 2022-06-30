@@ -35,6 +35,14 @@ body {
     min-width: 70%;
 }
 
+.searchForm {
+    max-width: 35%;
+}
+
+#search {
+    width: 50%;
+}
+
 .welcomePage {
     font-size: 1.2rem;
 }

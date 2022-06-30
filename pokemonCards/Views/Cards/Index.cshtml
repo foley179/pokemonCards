@@ -4,7 +4,17 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<!-- search bar -->
+<div class="input-group py-3 searchForm">
+    <input id="search" class="form-control" type="search" placeholder="Search for" aria-label="Search">
+    <!-- search filter dropdown -->
+    <select class="form-select" id="searchFilter">
+        <option value="name">Name</option>
+        <option value="user">User</option>
+        <option value="set">Set</option>
+        <option value="rarity">Rarity</option>
+    </select>
+</div>
 
 <p>
     <a class="btn btn-primary" asp-action="Create">Create New</a>
