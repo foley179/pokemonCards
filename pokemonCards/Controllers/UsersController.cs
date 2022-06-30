@@ -23,7 +23,7 @@ namespace pokemonCards.Controllers
         public async Task<IActionResult> Index()
         {
               return _context.User != null ? 
-                          View(await _context.User.ToListAsync()) :
+                          View(await _context.User.OrderBy(user => user.Name).ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.User'  is null.");
         }
 
@@ -158,7 +158,7 @@ namespace pokemonCards.Controllers
         // GET: Users/UserList
         public async Task<IActionResult> getUsers()
         { // used from JS AJAX to update user select dropdown
-            var UserList = await _context.User.ToListAsync();
+            var UserList = await _context.User.OrderBy(user => user.Name).ToListAsync();
             return Json(UserList);
         }
 
