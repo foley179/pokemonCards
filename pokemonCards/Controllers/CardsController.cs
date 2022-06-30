@@ -48,7 +48,6 @@ namespace pokemonCards.Controllers
         // GET: Cards/Create
         public IActionResult Create()
         {
-
             return View();
         }
 
@@ -57,7 +56,7 @@ namespace pokemonCards.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,User,Name,Serial")] Card card)
+        public async Task<IActionResult> Create([Bind("Id,User,Name,Serial,Holo,Set,Subset,Rarity,ImgCode")] Card card)
         {
             if (ModelState.IsValid)
             {
@@ -89,7 +88,7 @@ namespace pokemonCards.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,User,Name,Serial")] Card card)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,User,Name,Serial,Holo,Set,Subset,Rarity,ImgCode")] Card card)
         {
             if (id != card.Id)
             {

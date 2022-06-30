@@ -20,3 +20,8 @@ if ($(location).attr("pathname") == "/Cards/Create") {
         }
     });
 };
+
+$(".imgButton").on("click", (e) => {
+    e.preventDefault();
+    $("#imgModal").modal("show");
+});

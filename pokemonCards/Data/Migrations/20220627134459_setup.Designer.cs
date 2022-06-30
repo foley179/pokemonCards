@@ -12,8 +12,8 @@ using pokemonCards.Data;
 namespace pokemonCards.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220626163740_initialSetup")]
-    partial class initialSetup
+    [Migration("20220627134459_setup")]
+    partial class setup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -234,11 +234,31 @@ namespace pokemonCards.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Holo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImgCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Rarity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Serial")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Set")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Subset")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

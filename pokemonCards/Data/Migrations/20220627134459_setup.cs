@@ -4,7 +4,7 @@
 
 namespace pokemonCards.Data.Migrations
 {
-    public partial class initialSetup : Migration
+    public partial class setup : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,7 +16,12 @@ namespace pokemonCards.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     User = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Serial = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Serial = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Holo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Set = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Subset = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Rarity = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImgCode = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
